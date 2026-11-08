@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <h2>Welcome!</h2>
+    </main>
+    
+    
+    <h1>EJS Practice</h1>
+    <h2>Hello, <%= person.name%></h2>
+    <h3>Occupation: <%= person.occupation%></h3>
+
+    <% if (person.occupation === 'Plumber') { %>
+        <p>You work with pipes!</p>
+    <% } else { %>
+        <p>That's an interesting job!</p>
+    <% } %>
+
+    <% if (person.green === 'green') { %>
+        <p>Oh wow you like green!</p>
+    <% } else { %>
+        <p>oh wow you like a color that is not green!</p>
+    <% } %>
+
+    <% if (['plumber', 'organist', 'bagpiper'].includes(person.occupation.toLowerCase())) { %>
+        <p>You work with pipes!</p>
+    <% } else { %>
+        <p>That's an interesting job!</p>
+    <% } %>
+    
+    <%- include('partials/footer') %>
+</body>
+</html>
